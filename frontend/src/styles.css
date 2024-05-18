@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Ensure no scrollbars */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topbar {
+    background-color: darkcyan;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Set position to relative for containing the absolute positioned button */
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-bottom: 0px; /* Add margin bottom for better spacing */
+}
+
+    #topbar h1 {
+        margin: 0;
+        font-family: "Berlin Sans FB", sans-serif; /* Apply the custom font */
+        color: white;
+        font-size: 24px; /* Increase font size for better readability */
+    }
+
+#logout {
+    background-color: grey; /* Attractive background color */
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    right: 50px; /* Slightly to the right */
+    font-size: 20px;
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-family: "Berlin Sans FB", sans-serif;
+}
+
+    #logout:hover {
+        background-color: white; /* Slightly darker on hover */
+        transform: translateY(-2px); /* Lift effect on hover */
+        color: black;
+    }
+
+#content {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Ensure no scrollbars */
+}
+
+#sidebar {
+    width: 200px; /* Increased width for better readability */
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: "Rockwell", sans-serif;
+    font-size: 25px;
+}
+
+    #sidebar select {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        font-family: "Rockwell", sans-serif;
+        font-size: 18px;
+    }
+
+        #sidebar select:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+#timetable {
+    display: none;
+    padding: 20px;
+    flex: 1;
+    overflow: hidden; /* Ensure no scrollbars */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Segoe UI Black";
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    table-layout: fixed; /* Fixed table layout */
+    margin: 0; /* Ensure table is within viewport */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    background-color: white;
+}
+
+th {
+    background-color: darkcyan;
+    color: white;
+}
+
+td.lunch {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+}
+
+tr:last-child td.lunch {
+    border-bottom: 1px solid #ddd;
+}
